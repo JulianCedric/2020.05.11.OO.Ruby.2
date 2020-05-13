@@ -1,28 +1,28 @@
 class Movie
-    attr_accessor :title, :genre, :director, :actor 
+    attr_accessor :title, :genre, :director, :actor
     @@all = []
 
-    def initialize(title, genre, director, actor) 
+    def initialize(title, genre, director, actor)
         @title = title
-        @genre = genre 
+        @genre = genre
         @director = director
-        @actor = actor 
+        @actor = actor
         Movie.all << self
     end
 
-    def self.all 
-        @@all 
+    def self.all
+        @@all
     end
 
     def roles
         Role.all.select do |role|
-            role.movie == self 
+            role.movie == self
         end
     end
 
-    def actors 
+    def actors
         roles.map do |role|
-            role.actor 
+            role.actor
         end
     end
 
@@ -30,4 +30,4 @@ class Movie
         Role.new(self, actor)
     end
 
-end 
+end
