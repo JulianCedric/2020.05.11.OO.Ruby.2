@@ -5,43 +5,43 @@ require_relative '../config/environment.rb'
 # # test code goes here
 #
 #
-# # Movie instances(3):
+# Movie instances(3):
 #
-# ironman1 = Movie.new("Iron Man", "Superhero")
-# ironman2 = Movie.new("Iron Man 2", "Superhero")
-# spiderman1 = Movie.new("Spiderman", "Superhero")
-#
-# # Actor instances(2):
-#
-# robert = Actor.new("Robert Downey", 45)
-# tom = Actor.new("Tom Holland", 20)
-#
-# # Role instances (2):
-#
-# role1 = Role.new(ironman1, robert)
-# role2 = Role.new(ironman2, robert)
-# role3 = Role.new(spiderman1, tom)
-#
-# # Viewer instances (2):
-#
-# adam = Viewer.new("Adam", 25)
-# belle = Viewer.new("Belle", 30)
-#
-# # Screen instances (2):
-#
-# screen1 = Screen.new(ironman1, adam)
-# screen2 = Screen.new(spiderman1, belle)
-#
-# # Award instances (2):
-#
-# award1 = Award.new("Golden Globes", robert)
-# award2 = Award.new("Oscars", robert)
-#
-# # Director instances (2):
-#
-# jonf = Director.new("Jon Favreau", ironman1)
-# jonf = Director.new("Jon Favreau", ironman2)
-# jonw = Director.new("Jon Watts", spiderman1)
+ironman1 = Movie.new("Iron Man", "Superhero")
+ironman2 = Movie.new("Iron Man 2", "Superhero")
+spiderman1 = Movie.new("Spiderman", "Superhero")
+
+# Actor instances(2):
+
+robert = Actor.new("Robert Downey", 45)
+tom = Actor.new("Tom Holland", 20)
+
+# Role instances (2):
+
+role1 = Role.new(ironman1, robert)
+role2 = Role.new(ironman2, robert)
+role3 = Role.new(spiderman1, tom)
+
+# Viewer instances (2):
+
+adam = Viewer.new("Adam", 25)
+belle = Viewer.new("Belle", 30)
+
+# Screen instances (2):
+
+screen1 = Screen.new(ironman1, adam)
+screen2 = Screen.new(spiderman1, belle)
+
+# Award instances (2):
+
+award1 = Award.new("Golden Globes", robert)
+award2 = Award.new("Oscars", robert)
+
+# Director instances (2):
+
+jonf = Director.new("Jon Favreau", ironman1)
+jonf = Director.new("Jon Favreau", ironman2)
+jonw = Director.new("Jon Watts", spiderman1)
 
 actor1 = Actor.new("Actor1", 76)
 director1 = Director.new("Director1")
