@@ -1,4 +1,4 @@
-class Actor
+class Actor < ActiveRecord::Base
     attr_accessor :name, :age
     @@all = []
 
@@ -34,3 +34,5 @@ class Actor
     # end
     
 end
+
+Actor.column_names
