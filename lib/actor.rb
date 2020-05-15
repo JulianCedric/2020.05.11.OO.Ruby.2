@@ -36,3 +36,5 @@ class Actor < ActiveRecord::Base
 end
 
 Actor.column_names
+
+# 
