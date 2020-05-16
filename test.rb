@@ -2,6 +2,7 @@
 # CREATOR:      Julian Pormentilla
 # CREATE:       Users should be able to create their own notes. 
 # READ:         Users should be able to search all their notes (as well as by mod, title, and date).
+    #               Users should also be able to see a list of all their mods. 
 # UPDATE:       Users should be able to make changes to their notes (as well as update a note's mod, title, or date). 
 # DELETE:       Users should be able to delete their notes (all of them or only specific ones by mod, title, or date).  
 
@@ -61,6 +62,14 @@ class User
             note.date
         end
         my_notes_by_date   
+    end
+
+    # Users should also be able to see a list of all their mods. 
+
+    def mods 
+        notes.map do |note|
+            note.mod 
+        end
     end
 
 # UPDATE: Users should be able to make changes to their notes (as well as update a note's mod, title, or date). 
@@ -223,3 +232,17 @@ puts note2.enter_notes_here
 # # # 
 
 # 
+
+
+# # # 
+
+# CREATE: Users should be able to create their own notes. 
+# READ: Users should be able to search all their notes (as well as by mod, title, and date). Users should also be able to see a list of all their mods. 
+# UPDATE: Users should be able to make changes to their notes (as well as update a note's mod, title, or date). 
+# DELETE: Users should be able to delete their notes (all of them or only specific ones by mod, title, or date). 
+
+# The association of a user to a module follows a strict sequence (user to: mod1, then to mod2, then to mod3, etc.) to mirror the real-life progression of learning a curriculum (one module at a time, and in a specific order).
+
+# If a user does not take notes for a particular module, the app will automatically associate that user to all modules preceeding the one they do take notes for. 
+
+# Although a user can be associated with only one module at a time, a user should still be able to access their notes from a different module. 
