@@ -1,16 +1,13 @@
 class Galaxy 
     @@all = [] 
     attr_accessor :name
-
     def initialize(name)
         @name = name
         Galaxy.all << self
     end
-    
     def self.all
         @@all
     end
-    
     def stars
         Star.all.select do |star|
             star.galaxy == self

@@ -1,16 +1,15 @@
+require_relative '..orm.rb'
+
 class Galaxy 
     @@all = [] 
     attr_accessor :name
-
     def initialize(name)
         @name = name
         Galaxy.all << self
     end
-    
     def self.all
         @@all
     end
-    
     def stars
         Star.all.select do |star|
             star.galaxy == self
@@ -21,6 +20,7 @@ class Galaxy
             star.solar_system 
         end
     end
+
     def planets
         solar_systems.map do |solar_system|
             solar_system.planets 
@@ -88,6 +88,9 @@ class Planet
     def self.all
         @@all
     end
+    def whoami
+        self
+    end
 end
 
 galaxy1 = Galaxy.new("Milky Way")
@@ -97,4 +100,6 @@ planet1 = Planet.new("Earth", solar_system1)
 planet2 = Planet.new("Mars", solar_system1)
 planet3 = Planet.new("Venus", solar_system1)
 
-puts star1.planets
+puts planet1.whoami  
+puts X
+puts galaxy1
